@@ -1,0 +1,14 @@
+com/minishop/minishop.class
+com/minishop/Controller/PersonController.class
+com/minishop/Service/UserService.class
+com/minishop/Service/AddressListService.class
+com/minishop/entity/User.class
+com/minishop/Controller/AddressListController.class
+com/minishop/Mapper/UserMapper.class
+com/minishop/Controller/UserController.class
+com/minishop/entity/AddressList.class
+com/minishop/Service/PersonalService.class
+com/minishop/entity/PersonalIntro.class
+com/minishop/Mapper/AddressListMapper.class
+com/minishop/Mapper/PersonalMapper.class
+com/minishop/utils/Result.class

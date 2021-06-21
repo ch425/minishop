@@ -1,0 +1,41 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD com.example.Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.minishop.Mapper.UserMapper">
+    <resultMap id="result" type="com.minishop.entity.User">
+        <result property="name" column="user_name" />
+        <result property="password" column="password" />
+        <result property="id" column="id"/>
+
+    </resultMap>
+
+    <select id="ListUser" resultMap="result">
+        SELECT * FROM user_info
+    </select>
+
+    <select id="findUserByName" resultMap="result">
+        SELECT * FROM user_info where user_name=#{name}
+    </select>
+
+    <insert id="insertUser" parameterType="com.minishop.entity.User"
+            keyProperty="id" useGeneratedKeys="true">
+        INSERT INTO user_info
+        (
+            id, user_name, password
+        )
+        VALUES (
+                   #{id},
+                   #{name, jdbcType=VARCHAR},
+                   #{password, jdbcType=VARCHAR}
+               )
+    </insert>
+
+    <delete id="delete" parameterType="int">
+        delete from user_info where id=#{id}
+    </delete>
+
+    <update id="Update" parameterType="com.minishop.entity.User">
+        update user_info set user_info.user_name=#{name},user_info.password=#{password} where user_info.id=#{id}
+    </update>
+</mapper>

@@ -1,0 +1,60 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD com.example.Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.minishop.Mapper.AddressListMapper">
+    <resultMap id="result" type="com.minishop.entity.AddressList">
+        <result property="id" column="id" />
+<!--        <result property="name" column="name" />-->
+<!--        <result property="age" column="age"/>-->
+<!--        <result property="sex" column="sex" />-->
+<!--        <result property="education" column="education" />-->
+<!--        <result property="edu_experience" column="edu_experience"/>-->
+<!--        <result property="specialty" column="specialty" />-->
+<!--        <result property="experience" column="experience" />-->
+<!--        <result property="tel" column="tel"/>-->
+<!--        <result property="email" column="email" />-->
+<!--        <result property="wechat" column="wechat"/>-->
+<!--        <result property="qq" column="qq" />-->
+<!--        <result property="personal_labels" column="personal_labels" />-->
+<!--        <result property="u_id" column="u_id"/>-->
+    </resultMap>
+
+    <select id="AddressList" resultMap="result">
+        SELECT * FROM address_list
+    </select>
+
+<!--    <select id="findPersonalById" resultMap="result">-->
+<!--        SELECT * FROM personal_intro where u_id=#{id}-->
+<!--    </select>-->
+
+
+<!--    <insert id="insertPersonal" parameterType="com.minishop.entity.PersonalIntro"-->
+<!--            keyProperty="u_id" useGeneratedKeys="true">-->
+<!--        INSERT INTO personal_intro-->
+<!--        (-->
+<!--            id, name, age, sex, education, edu_experience, specialty, experience, tel, email, wechat, qq, personal_labels, u_id-->
+<!--        )-->
+<!--        VALUES (-->
+<!--                   #{id},-->
+<!--                   #{name, jdbcType=VARCHAR},-->
+<!--                   #{age},-->
+<!--                   #{sex},-->
+<!--                   #{education, jdbcType=VARCHAR},-->
+<!--                   #{edu_experience, jdbcType=VARCHAR},-->
+<!--                   #{specialty, jdbcType=VARCHAR},-->
+<!--                   #{experience, jdbcType=VARCHAR},-->
+<!--                   #{tel, jdbcType=VARCHAR},-->
+<!--                   #{email, jdbcType=VARCHAR},-->
+<!--                   #{wechat, jdbcType=VARCHAR},-->
+<!--                   #{qq, jdbcType=VARCHAR},-->
+<!--                   #{personal_labels, jdbcType=VARCHAR},-->
+<!--                   #{u_id}-->
+<!--               )-->
+<!--    </insert>-->
+
+<!--    <update id="Update" parameterType="com.minishop.entity.PersonalIntro">-->
+<!--        update personal_intro set personal_intro.name=#{name},personal_intro.sex=#{sex},personal_intro.age=#{age},personal_intro.education=#{education},personal_intro.edu_experience=#{edu_experience},personal_intro.specialty=#{specialty},personal_intro.experience=#{experience},personal_intro.tel=#{tel},personal_intro.email=#{email},personal_intro.wechat=#{wechat}, personal_intro.personal_labels=#{personal_labels} where personal_intro.u_id=#{u_id}-->
+<!--    </update>-->
+</mapper>

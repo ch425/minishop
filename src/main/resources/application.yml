@@ -1,0 +1,16 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    #    159.75.7.3
+    url: jdbc:mysql://localhost:3306/minishop
+    #    url: jdbc:mysql://159.75.7.3:3306/minishop
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root123456
+
+#resources:
+#static-locations: 配置静态资源文件路径
+mybatis: #mapper文件扫描路径
+  mapper-locations: classpath:Mapper/*Mapper.xml
